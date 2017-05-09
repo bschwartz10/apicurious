@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509210811) do
+ActiveRecord::Schema.define(version: 20170509221142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20170509210811) do
     t.string "uid"
     t.string "token"
     t.string "image_url"
+    t.string "following_url"
+    t.string "followers_url"
+    t.string "starred_url"
   end
 
 end

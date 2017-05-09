@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
     end
     redirect_to root_path
-    require "pry"; binding.pry
   end
 
   def destroy

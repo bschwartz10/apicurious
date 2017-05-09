@@ -1,5 +1,6 @@
 <% if current_user %>
   Hello, <%= current_user.username %>
+  <%= image_tag(current_user.image_url, height: '150', width: '150') %>
   <%= link_to "Logout", logout_path, method: :delete %>
 <% else %>
   <%= link_to "Sign In With Github", github_login_path %>
