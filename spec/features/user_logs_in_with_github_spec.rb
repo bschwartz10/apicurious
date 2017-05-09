@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'User can log in with GitHub' do
-  context 'An existing user has valid credentials' do
+  xcontext 'An existing user has valid credentials' do
     before do
       Capybara.app = Apicurious::Application
       stub_oauth
@@ -12,6 +12,7 @@ RSpec.feature 'User can log in with GitHub' do
       OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
         provider: 'github',
         username: 'bschwartz10',
+
         uid: '1234',
         token: 'qwerty'
       })
