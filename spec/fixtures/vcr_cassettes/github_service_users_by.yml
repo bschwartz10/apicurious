@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user?access_token=<Github_User_Token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 10 May 2017 20:01:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4985'
+      X-Ratelimit-Reset:
+      - '1494448314'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"40264aa39da5ee0c94f1588be849c971"
+      Last-Modified:
+      - Fri, 10 Feb 2017 17:43:06 GMT
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - f0e7f1df496e6cb4abfd
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - a51acaae89a7607fd7ee967627be18e4
+      X-Github-Request-Id:
+      - CF73:3FFB:74012DE:907B3DE:5913717E
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"bschwartz10","id":21000661,"avatar_url":"https://avatars3.githubusercontent.com/u/21000661?v=3","gravatar_id":"","url":"https://api.github.com/users/bschwartz10","html_url":"https://github.com/bschwartz10","followers_url":"https://api.github.com/users/bschwartz10/followers","following_url":"https://api.github.com/users/bschwartz10/following{/other_user}","gists_url":"https://api.github.com/users/bschwartz10/gists{/gist_id}","starred_url":"https://api.github.com/users/bschwartz10/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bschwartz10/subscriptions","organizations_url":"https://api.github.com/users/bschwartz10/orgs","repos_url":"https://api.github.com/users/bschwartz10/repos","events_url":"https://api.github.com/users/bschwartz10/events{/privacy}","received_events_url":"https://api.github.com/users/bschwartz10/received_events","type":"User","site_admin":false,"name":"Brett
+        Schwartz","company":"@turingschool","blog":"","location":"Denver, CO","email":"bschwartz92@gmail.com","hireable":true,"bio":"I
+        am currently a Back-End Engineering Student at the Turing School of Software
+        & Design.","public_repos":33,"public_gists":11,"followers":4,"following":4,"created_at":"2016-08-12T23:51:08Z","updated_at":"2017-02-10T17:43:06Z"}'
+    http_version: 
+  recorded_at: Wed, 10 May 2017 20:01:01 GMT
+recorded_with: VCR 3.0.3
