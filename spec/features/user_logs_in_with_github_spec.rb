@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'User can log in with GitHub' do
-  xcontext 'An existing user has valid credentials' do
+  context 'An existing user has valid credentials' do
     before do
       Capybara.app = Apicurious::Application
       stub_oauth
@@ -10,11 +10,9 @@ RSpec.feature 'User can log in with GitHub' do
     def stub_oauth
       OmniAuth.config.test_mode = true
       OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-        provider: 'github',
-        username: 'bschwartz10',
-
         uid: '1234',
-        token: 'qwerty'
+        info: {name: 'Brett Schwartz'},
+        credentials: {oauth_token: 'qwerty'},
       })
     end
 
@@ -24,7 +22,7 @@ RSpec.feature 'User can log in with GitHub' do
       expect(page.status_code).to eq 200
       click_link 'Sign In With Github'
       expect(current_path).to eq(root_path)
-      expect(page).to have_content('bschwartz10')
+      expect(page).to have_content('Brett Schwartz')
       expect(page).to have_link('Logout')
     end
   end
