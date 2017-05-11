@@ -49,5 +49,18 @@ describe GithubService do
         end
       end
     end
+  context ".events_by(username, token)" do
+      it "returns an array of user events" do
+        VCR.use_cassette("github_service_events_by") do
+          token = ENV['github_user_token']
+          username = 'bschwartz10'
+          events = GithubService.new.events_by(username, token)
+
+          expect(events).to be_an(Array)
+          expect(events.first).to have_key(:id)
+          expect(events.first[:id]).to be_a(String)
+        end
+      end
+    end
   end
 end
