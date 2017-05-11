@@ -29,6 +29,22 @@ end
     end
   end
 
+  def self.push_events(username, token)
+    GithubService.new.events_by(username, token).select do |event|
+      event[:type] == "PushEvent"
+    end
+  end
+
+  def self.commits(username, token)
+    push_events = GithubUser.push_events(username, token)
+
+    push_events.map do |event|
+      event[:payload][:commits].map do|commit|
+        Commit.new(commit)
+      end
+    end
+  end
+
   private
     attr_reader :attrs
 
