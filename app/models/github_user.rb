@@ -45,6 +45,12 @@ end
     end
   end
 
+  def self.repos(token)
+    GithubService.new.repos_by(token).map do |repo|
+      Repo.new(repo)
+    end
+  end
+
   private
     attr_reader :attrs
 
