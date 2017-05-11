@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/followers', to: 'followers#show'
   get '/following', to: 'following#show'
   get '/commits', to: 'commits#show'
+  get '/repos', to: 'repos#show'
 end
