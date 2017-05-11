@@ -66,5 +66,16 @@ RSpec.feature 'User can log in with GitHub' do
         expect(page).to have_content('jk1dd')
       end
     end
+    scenario 'The user clicks a link to see their recent commits' do
+      VCR.use_cassette("recent commits") do
+        visit root_path
+        click_link 'Sign In With Github'
+
+        click_on('See Recent Commits')
+        expect(current_path).to eq(commits_path)
+        expect(page).to have_content("sha: 3ab71cf9248bd858195cf2236cc152d6403b9db3")
+        expect(page).to have_content("bschwartz92@gmail.com")
+      end
+    end
   end
 end
