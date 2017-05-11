@@ -36,6 +36,17 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.following_by(token)
+    service = GithubService.new
+    service.following_by(token)
+  end
+
+  def following_by(token)
+    response = conn.get("/user/following", {access_token: token})
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
     def conn
       @_conn
