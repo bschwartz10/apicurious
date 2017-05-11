@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 23:14:23 GMT
+      - Thu, 11 May 2017 18:06:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,16 +31,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4976'
+      - '4776'
       X-Ratelimit-Reset:
-      - '1494459853'
+      - '1494526490'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
-      - Accept-Encoding
       Etag:
-      - W/"40264aa39da5ee0c94f1588be849c971"
+      - W/"68e7505e5b716c4d618ccbded457f2af"
       Last-Modified:
       - Fri, 10 Feb 2017 17:43:06 GMT
       X-Oauth-Scopes:
@@ -66,16 +65,14 @@ http_interactions:
       - deny
       X-Xss-Protection:
       - 1; mode=block
-      X-Served-By:
-      - 10ea50bffaded85949561216def301f3
       X-Github-Request-Id:
-      - DAF5:4005:71EC604:8DFE522:59139ECF
+      - FF84:3FF6:547174A:690F4CE:5914A809
     body:
       encoding: ASCII-8BIT
       string: '{"login":"bschwartz10","id":21000661,"avatar_url":"https://avatars3.githubusercontent.com/u/21000661?v=3","gravatar_id":"","url":"https://api.github.com/users/bschwartz10","html_url":"https://github.com/bschwartz10","followers_url":"https://api.github.com/users/bschwartz10/followers","following_url":"https://api.github.com/users/bschwartz10/following{/other_user}","gists_url":"https://api.github.com/users/bschwartz10/gists{/gist_id}","starred_url":"https://api.github.com/users/bschwartz10/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bschwartz10/subscriptions","organizations_url":"https://api.github.com/users/bschwartz10/orgs","repos_url":"https://api.github.com/users/bschwartz10/repos","events_url":"https://api.github.com/users/bschwartz10/events{/privacy}","received_events_url":"https://api.github.com/users/bschwartz10/received_events","type":"User","site_admin":false,"name":"Brett
         Schwartz","company":"@turingschool","blog":"","location":"Denver, CO","email":"bschwartz92@gmail.com","hireable":true,"bio":"I
         am currently a Back-End Engineering Student at the Turing School of Software
-        & Design.","public_repos":33,"public_gists":11,"followers":4,"following":4,"created_at":"2016-08-12T23:51:08Z","updated_at":"2017-02-10T17:43:06Z"}'
+        & Design.","public_repos":33,"public_gists":11,"followers":4,"following":5,"created_at":"2016-08-12T23:51:08Z","updated_at":"2017-02-10T17:43:06Z"}'
     http_version: 
-  recorded_at: Wed, 10 May 2017 23:14:23 GMT
+  recorded_at: Thu, 11 May 2017 18:06:02 GMT
 recorded_with: VCR 3.0.3
