@@ -1,4 +1,5 @@
 class GithubService
+attr_reader :token
 
   def initialize
     @_conn = Faraday.new(:url => "https://api.github.com")
@@ -44,6 +45,16 @@ class GithubService
   def following_by(token)
     response = conn.get("/user/following", {access_token: token})
 
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.events_by(username, token)
+    service = GithubService.new
+    service.events_by(token)
+  end
+
+  def events_by(username, token)
+    response = conn.get("/users/#{username}/events", {access_token: token})
     JSON.parse(response.body, symbolize_names: true)
   end
 
