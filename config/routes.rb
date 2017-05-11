@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
   get '/followers', to: 'followers#show'
   get '/following', to: 'following#show'
+  get '/commits', to: 'commits#show'
 end
