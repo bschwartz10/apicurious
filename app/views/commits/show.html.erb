@@ -1,0 +1,7 @@
+<h1>Recent Commits</h1>
+
+<% @commits.flatten.each do |commit| %>
+  <p>email: <%= commit.email %></p>
+  <p>name: <%= commit.name %></p>
+  <p>sha: <%= commit.sha %></p></br>
+<% end %>
