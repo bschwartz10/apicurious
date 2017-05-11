@@ -37,5 +37,17 @@ describe GithubService do
         end
       end
     end
+  context ".following_by(token)" do
+      it "returns an array of user following" do
+        VCR.use_cassette("github_service_following_by") do
+          token = ENV['github_user_token']
+          following = GithubService.following_by(token)
+
+          expect(following).to be_an(Array)
+          expect(following.first).to have_key(:login)
+          expect(following.first[:login]).to be_a(String)
+        end
+      end
+    end
   end
 end

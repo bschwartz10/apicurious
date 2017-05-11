@@ -97,4 +97,72 @@ describe GithubUser do
       expect(johnathon.login).to eq("jk1dd")
     end
   end
+  context ".followers(token)" do
+    it "returns an array of followers users" do
+      token = ENV['github_user_token']
+      stubbed_response = [
+        {
+          "login": "VictoriaVasys",
+          "id": 10079657,
+          "avatar_url": "https://avatars3.githubusercontent.com/u/10079657?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/VictoriaVasys",
+          "html_url": "https://github.com/VictoriaVasys",
+          "followers_url": "https://api.github.com/users/VictoriaVasys/followers",
+          "following_url": "https://api.github.com/users/VictoriaVasys/following{/other_user}",
+          "gists_url": "https://api.github.com/users/VictoriaVasys/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/VictoriaVasys/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/VictoriaVasys/subscriptions",
+          "organizations_url": "https://api.github.com/users/VictoriaVasys/orgs",
+          "repos_url": "https://api.github.com/users/VictoriaVasys/repos",
+          "events_url": "https://api.github.com/users/VictoriaVasys/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/VictoriaVasys/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        {
+          "login": "stovermc",
+          "id": 15877604,
+          "avatar_url": "https://avatars0.githubusercontent.com/u/15877604?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stovermc",
+          "html_url": "https://github.com/stovermc",
+          "followers_url": "https://api.github.com/users/stovermc/followers",
+          "following_url": "https://api.github.com/users/stovermc/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stovermc/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stovermc/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stovermc/subscriptions",
+          "organizations_url": "https://api.github.com/users/stovermc/orgs",
+          "repos_url": "https://api.github.com/users/stovermc/repos",
+          "events_url": "https://api.github.com/users/stovermc/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stovermc/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        {
+          "login": "NicholasJacques",
+          "id": 20036943,
+          "avatar_url": "https://avatars3.githubusercontent.com/u/20036943?v=3",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/NicholasJacques",
+          "html_url": "https://github.com/NicholasJacques",
+          "followers_url": "https://api.github.com/users/NicholasJacques/followers",
+          "following_url": "https://api.github.com/users/NicholasJacques/following{/other_user}",
+          "gists_url": "https://api.github.com/users/NicholasJacques/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/NicholasJacques/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/NicholasJacques/subscriptions",
+          "organizations_url": "https://api.github.com/users/NicholasJacques/orgs",
+          "repos_url": "https://api.github.com/users/NicholasJacques/repos",
+          "events_url": "https://api.github.com/users/NicholasJacques/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/NicholasJacques/received_events",
+          "type": "User",
+          "site_admin": false
+          }
+        ]
+      allow_any_instance_of(GithubService).to receive(:following_by).with(token).and_return(stubbed_response)
+      victoria = GithubUser.following(token).first
+
+      expect(victoria.login).to eq("VictoriaVasys")
+    end
+  end
 end
