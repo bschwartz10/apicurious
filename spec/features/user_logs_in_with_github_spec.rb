@@ -56,5 +56,15 @@ RSpec.feature 'User can log in with GitHub' do
         expect(page).to have_content('jk1dd')
       end
     end
+    scenario 'The user clicks a link to who their following and the info is displayed' do
+      VCR.use_cassette("following") do
+        visit root_path
+        click_link 'Sign In With Github'
+
+        click_on('following')
+        expect(current_path).to eq(following_path)
+        expect(page).to have_content('jk1dd')
+      end
+    end
   end
 end
