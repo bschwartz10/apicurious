@@ -58,6 +58,16 @@ attr_reader :token
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.repos_by(token)
+    service = GithubService.new
+    service.repos_by(token)
+  end
+
+  def repos_by(token)
+    response = conn.get("/user/repos", {access_token: token})
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
     def conn
       @_conn

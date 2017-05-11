@@ -77,5 +77,16 @@ RSpec.feature 'User can log in with GitHub' do
         expect(page).to have_content("bschwartz92@gmail.com")
       end
     end
+    scenario 'The user clicks a link to see their repos' do
+      VCR.use_cassette("repos") do
+        visit root_path
+        click_link 'Sign In With Github'
+
+        click_on('List of Repos')
+        expect(current_path).to eq(repos_path)
+        expect(page).to have_content("apicurious")
+        expect(page).to have_content("bike-share")
+      end
+    end
   end
 end

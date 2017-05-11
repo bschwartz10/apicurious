@@ -62,5 +62,17 @@ describe GithubService do
         end
       end
     end
+  context ".repos_by(token)" do
+      it "returns an array of repos" do
+        VCR.use_cassette("github_service_repos_by") do
+          token = ENV['github_user_token']
+          repos = GithubService.repos_by(token)
+
+          expect(repos).to be_an(Array)
+          expect(repos.first).to have_key(:name)
+          expect(repos.first[:name]).to be_a(String)
+        end
+      end
+    end
   end
 end
