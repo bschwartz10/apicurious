@@ -3,3 +3,7 @@
 <div class="image">
   <%= image_tag(@githubuser.avatar_url) %>
 </div>
+
+<h3>You have <%= @starred_repos.count %> starred repo</h3>
+
+<%= link_to 'followers', followers_path %>
