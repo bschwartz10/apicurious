@@ -23,6 +23,12 @@ end
     end
   end
 
+  def self.following(token)
+    GithubService.following_by(token).map do |user|
+      Following.new(user)
+    end
+  end
+
   private
     attr_reader :attrs
 
