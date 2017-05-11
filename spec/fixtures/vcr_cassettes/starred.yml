@@ -1,0 +1,154 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user?access_token=<Github_User_Token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 10 May 2017 23:14:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4978'
+      X-Ratelimit-Reset:
+      - '1494459853'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"40264aa39da5ee0c94f1588be849c971"
+      Last-Modified:
+      - Fri, 10 Feb 2017 17:43:06 GMT
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - f0e7f1df496e6cb4abfd
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 02ea60dfed58b2a09106fafd6ca0c108
+      X-Github-Request-Id:
+      - DAF1:3FF6:4C650D4:5F117AA:59139ECE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"bschwartz10","id":21000661,"avatar_url":"https://avatars3.githubusercontent.com/u/21000661?v=3","gravatar_id":"","url":"https://api.github.com/users/bschwartz10","html_url":"https://github.com/bschwartz10","followers_url":"https://api.github.com/users/bschwartz10/followers","following_url":"https://api.github.com/users/bschwartz10/following{/other_user}","gists_url":"https://api.github.com/users/bschwartz10/gists{/gist_id}","starred_url":"https://api.github.com/users/bschwartz10/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bschwartz10/subscriptions","organizations_url":"https://api.github.com/users/bschwartz10/orgs","repos_url":"https://api.github.com/users/bschwartz10/repos","events_url":"https://api.github.com/users/bschwartz10/events{/privacy}","received_events_url":"https://api.github.com/users/bschwartz10/received_events","type":"User","site_admin":false,"name":"Brett
+        Schwartz","company":"@turingschool","blog":"","location":"Denver, CO","email":"bschwartz92@gmail.com","hireable":true,"bio":"I
+        am currently a Back-End Engineering Student at the Turing School of Software
+        & Design.","public_repos":33,"public_gists":11,"followers":4,"following":4,"created_at":"2016-08-12T23:51:08Z","updated_at":"2017-02-10T17:43:06Z"}'
+    http_version: 
+  recorded_at: Wed, 10 May 2017 23:14:22 GMT
+- request:
+    method: get
+    uri: https://api.github.com/user/starred?access_token=<Github_User_Token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 10 May 2017 23:14:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4977'
+      X-Ratelimit-Reset:
+      - '1494459853'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"77206c0f1e62a601d95ee876de32493a"
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - f0e7f1df496e6cb4abfd
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - eef8b8685a106934dcbb4b7c59fba0bf
+      X-Github-Request-Id:
+      - DAF3:3FFB:75E7CA2:92DA6DC:59139ECF
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":90686553,"name":"apicurious","full_name":"bschwartz10/apicurious","owner":{"login":"bschwartz10","id":21000661,"avatar_url":"https://avatars3.githubusercontent.com/u/21000661?v=3","gravatar_id":"","url":"https://api.github.com/users/bschwartz10","html_url":"https://github.com/bschwartz10","followers_url":"https://api.github.com/users/bschwartz10/followers","following_url":"https://api.github.com/users/bschwartz10/following{/other_user}","gists_url":"https://api.github.com/users/bschwartz10/gists{/gist_id}","starred_url":"https://api.github.com/users/bschwartz10/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/bschwartz10/subscriptions","organizations_url":"https://api.github.com/users/bschwartz10/orgs","repos_url":"https://api.github.com/users/bschwartz10/repos","events_url":"https://api.github.com/users/bschwartz10/events{/privacy}","received_events_url":"https://api.github.com/users/bschwartz10/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/bschwartz10/apicurious","description":null,"fork":false,"url":"https://api.github.com/repos/bschwartz10/apicurious","forks_url":"https://api.github.com/repos/bschwartz10/apicurious/forks","keys_url":"https://api.github.com/repos/bschwartz10/apicurious/keys{/key_id}","collaborators_url":"https://api.github.com/repos/bschwartz10/apicurious/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/bschwartz10/apicurious/teams","hooks_url":"https://api.github.com/repos/bschwartz10/apicurious/hooks","issue_events_url":"https://api.github.com/repos/bschwartz10/apicurious/issues/events{/number}","events_url":"https://api.github.com/repos/bschwartz10/apicurious/events","assignees_url":"https://api.github.com/repos/bschwartz10/apicurious/assignees{/user}","branches_url":"https://api.github.com/repos/bschwartz10/apicurious/branches{/branch}","tags_url":"https://api.github.com/repos/bschwartz10/apicurious/tags","blobs_url":"https://api.github.com/repos/bschwartz10/apicurious/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/bschwartz10/apicurious/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/bschwartz10/apicurious/git/refs{/sha}","trees_url":"https://api.github.com/repos/bschwartz10/apicurious/git/trees{/sha}","statuses_url":"https://api.github.com/repos/bschwartz10/apicurious/statuses/{sha}","languages_url":"https://api.github.com/repos/bschwartz10/apicurious/languages","stargazers_url":"https://api.github.com/repos/bschwartz10/apicurious/stargazers","contributors_url":"https://api.github.com/repos/bschwartz10/apicurious/contributors","subscribers_url":"https://api.github.com/repos/bschwartz10/apicurious/subscribers","subscription_url":"https://api.github.com/repos/bschwartz10/apicurious/subscription","commits_url":"https://api.github.com/repos/bschwartz10/apicurious/commits{/sha}","git_commits_url":"https://api.github.com/repos/bschwartz10/apicurious/git/commits{/sha}","comments_url":"https://api.github.com/repos/bschwartz10/apicurious/comments{/number}","issue_comment_url":"https://api.github.com/repos/bschwartz10/apicurious/issues/comments{/number}","contents_url":"https://api.github.com/repos/bschwartz10/apicurious/contents/{+path}","compare_url":"https://api.github.com/repos/bschwartz10/apicurious/compare/{base}...{head}","merges_url":"https://api.github.com/repos/bschwartz10/apicurious/merges","archive_url":"https://api.github.com/repos/bschwartz10/apicurious/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/bschwartz10/apicurious/downloads","issues_url":"https://api.github.com/repos/bschwartz10/apicurious/issues{/number}","pulls_url":"https://api.github.com/repos/bschwartz10/apicurious/pulls{/number}","milestones_url":"https://api.github.com/repos/bschwartz10/apicurious/milestones{/number}","notifications_url":"https://api.github.com/repos/bschwartz10/apicurious/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/bschwartz10/apicurious/labels{/name}","releases_url":"https://api.github.com/repos/bschwartz10/apicurious/releases{/id}","deployments_url":"https://api.github.com/repos/bschwartz10/apicurious/deployments","created_at":"2017-05-09T01:00:39Z","updated_at":"2017-05-09T22:57:03Z","pushed_at":"2017-05-10T17:53:43Z","git_url":"git://github.com/bschwartz10/apicurious.git","ssh_url":"git@github.com:bschwartz10/apicurious.git","clone_url":"https://github.com/bschwartz10/apicurious.git","svn_url":"https://github.com/bschwartz10/apicurious","homepage":null,"size":35,"stargazers_count":1,"watchers_count":1,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":1,"default_branch":"master","permissions":{"admin":true,"push":true,"pull":true}}]'
+    http_version: 
+  recorded_at: Wed, 10 May 2017 23:14:23 GMT
+recorded_with: VCR 3.0.3
